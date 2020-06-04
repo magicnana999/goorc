@@ -18,8 +18,8 @@ import (
 func baidutoken() string {
 	url := "https://aip.baidubce.com/oauth/2.0/token"
 	grant_type := "client_credentials" // 必须参数，固定 client_credentials
-	client_id := "8tAqe2vvZ1KbavGyCvqQ1GO2"  //必须参数，应用的API Key
-	client_secret := "I6FI2Bw3bepWeKrFWYBoUGigwcrPgaCB"  //必须参数，应用的Secret Key
+	client_id := "xxxxxxx"  //必须参数，应用的API Key
+	client_secret := "xxxxxx"  //必须参数，应用的Secret Key
 	resp, err := http.Post(url,"application/x-www-form-urlencoded",strings.NewReader("grant_type="+grant_type+"&client_id="+client_id+"&client_secret="+client_secret))
 	if err != nil {
 		fmt.Println(err.Error())
